@@ -2,7 +2,9 @@ import { default as React, useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Register.css';
+ 
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -67,7 +69,7 @@ const Register = () => {
             <p>আপনার কি আগেই আছে?<Link to="/login" className='text-primary pe-auto text-decoration-none'  > ক্লিক করুন</Link></p>
 
              
-
+          <SocialLogin></SocialLogin>
         </div>
     );
 };

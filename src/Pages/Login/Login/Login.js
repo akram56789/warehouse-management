@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('')
@@ -85,8 +86,9 @@ const Login = () => {
             {errorElement}
             <p className='mx-auto'>আপনি এখানে নতুন?    <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>ক্লিক করুন</Link></p>
             <p className='mx-auto'>আপনি কি পাসওয়ার্ড ভুলে গেছেন?    <button   className=' btn btn-link text-primary ps-auto text-decoration-none' onClick={resetPassword}>পাসওয়ার্ড রিসেট দিন</button></p>
-            
+            <SocialLogin></SocialLogin>
             <ToastContainer />
+
 
         </div>
     );
