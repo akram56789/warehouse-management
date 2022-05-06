@@ -8,7 +8,7 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Patates.jpg"
+      src="https://wallpaperaccess.com/full/1986181.jpg"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -19,7 +19,7 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Patates.jpg"
+      src="https://www.animaderm.com/upload/stblog/1/3/71/371large.jpg"
       alt="Second slide"
     />
 
@@ -31,7 +31,7 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Patates.jpg"
+      src="https://wallpaperaccess.com/full/1912939.jpg"
       alt="Third slide"
     />
 
