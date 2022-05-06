@@ -8,7 +8,7 @@ const Product = ({ product }) => {
   const navigate = useNavigate();
   const navigateToProductDetail = id => {
     navigate(`/product/${_id}`)
-
+    
   }
 
     return (
@@ -27,7 +27,7 @@ const Product = ({ product }) => {
               Quantity: {quantity}
             </p>
 
-            <Button onClick={() =>navigateToProductDetail(_id)} variant="primary">Update</Button>
+            <Button className="btn btn-primary" onClick={() =>navigateToProductDetail(_id)}  >Update</Button>
           </Card.Body>
         </Card>
       </>

@@ -1,6 +1,5 @@
 [
     {
-        "_id": "6273ba2182a3f247ef6eaf28",
         "name": "Onion",
         "img": "https://images.unsplash.com/photo-https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -9,7 +8,6 @@
         "supplier": "Sparks"
     },
     {
-        "_id": "6273ba21c16ba5694e08eded",
         "name": "Potato",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -18,7 +16,6 @@
         "supplier": "Brooke"
     },
     {
-        "_id": "6273ba21f1f3e1537686f020",
         "name": "Garlic",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "50",
@@ -27,7 +24,6 @@
         "supplier": "Tina"
     },
     {
-        "_id": "6273ba21e2d4e4ba48796aec",
         "name": "Gilliam",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -36,7 +32,6 @@
         "supplier": "Fanny"
     },
     {
-        "_id": "6273ba214fa56f3c5d7b1a6a",
         "name": "Leticia",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -45,7 +40,6 @@
         "supplier": "Rodriguez"
     },
     {
-        "_id": "6273ba21bd7284c0d306628f",
         "name": "Cantrell",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -54,7 +48,6 @@
         "supplier": "Rebecca"
     },
     {
-        "_id": "6273ba21eb2f10ba78e68725",
         "name": "Peters",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -63,7 +56,6 @@
         "supplier": "Ball"
     },
     {
-        "_id": "6273ba21283192125b97409e",
         "name": "Rosetta",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -72,7 +64,6 @@
         "supplier": "Atkins"
     },
     {
-        "_id": "6273ba2136c6457ed5f59603",
         "name": "Christi",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -81,7 +72,6 @@
         "supplier": "Neva"
     },
     {
-        "_id": "6273ba21a301000be833b458",
         "name": "Jill",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
@@ -90,7 +80,6 @@
         "supplier": "Larsen"
     },
     {
-        "_id": "6273ba212598473e9dbcd762",
         "name": "Fitzgerald",
         "img": "https://images.unsplash.com/photo-1617130094141-532436117aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         "description": "<ReferenceError: description is not defined>",
