@@ -6,26 +6,7 @@ import './ManageProduct.css';
 
 const ManageProducts = () => {
     const [products, setProducts] = useProducts()
-    // const [restock, setRestock] = useProducts()
-
-    // const restockProduct = _id => {
-    //     const proceed = window.confirm('Product restock !!')
-    //     if (proceed) {
-    //         const url = `http://localhost:5000/product/${_id}`
-    //         fetch(url, {
-    //             method: "POST"
-    //         })
-    //         .then(res=> res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             const remaining = restock.filter(re => re._id !== _id)
-    //             setRestock(remaining)
-                
-    //         })
-
-
-    //     }
-    // }
+    
 
     const handleDelete = _id => {
         const proceed = window.confirm('Delete tha product !!')

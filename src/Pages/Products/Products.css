@@ -15,3 +15,80 @@
         grid-template-columns: repeat(2, 1fr);
     }
 } */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-familly: "Poppins", sans-serif;
+}
+
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    min-height: 800px;
+} */
+
+
+.inventory {
+    margin-top: 20px;
+}
+
+.container .cart {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: #fff;
+    margin: 50px 10px;
+    padding: 30px 25px;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.container .cart:hover {
+    height: 350px;
+}
+
+
+.container .cart .image {
+    position: relative;
+    width: 200px;
+    height: 260px;
+
+    top: -40%;
+    left: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container .cart .image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.container .cart .content {
+    position: relative;
+    top: -144px;
+    /* padding: 10px 15px; */
+    color: #111;
+
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+
+.container .cart:hover .content {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+
+}

@@ -1,4 +1,4 @@
-import { Button, Card } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
@@ -13,7 +13,26 @@ const Product = ({ product }) => {
 
     return (
       <>
-        <Card style={{ width: '18rem' }}>
+
+ 
+  <div  className="inventory">
+    <div className="cart">
+      <div  className="image">
+        <img href = "#" src = {img} />
+      </div>
+      <div className="content">
+        <h4>{name}</h4>
+        <p>Price: {price}</p>
+        <p>Supplier: {supplier}</p>
+        <p>Quantity: {quantity}</p>
+        <p>Description: {description}</p>
+        <Button className="btn btn-primary w-100 rounded-2 " onClick={() =>navigateToProductDetail(_id)}  >Update</Button>
+
+      </div>
+    </div>    
+  </div>
+ 
+        {/* <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={img} />
           <Card.Body>
             <Card.Title>{name}</Card.Title>
@@ -32,7 +51,7 @@ const Product = ({ product }) => {
 
             <Button className="btn btn-primary w-100 rounded-2 " onClick={() =>navigateToProductDetail(_id)}  >Update</Button>
           </Card.Body>
-        </Card>
+        </Card> */}
       </>
 
     );
