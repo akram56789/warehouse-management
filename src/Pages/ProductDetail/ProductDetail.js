@@ -1,51 +1,214 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
-import useProductDetail from '../../Hooks/UseProductDetail';
-import './ProductDetail.css';
+import { toast } from 'react-toastify';
+ 
+ const ProductDetail = () => {
+  const { productId } = useParams();
+  const [product, setProduct] = useState({}); 
+  
+  let  {img, name, price,  description, supplier, quantity } = product;
+  useEffect(() =>{
+    const url = `http://localhost:5000/product/${productId}`
+    console.log(url);
+    fetch(url)
+    .then(res => res.json())
+    .then(data => setProduct(data))
+  },[productId])
 
-const ProductDetail = () => {
-    const { productId } = useParams();
-    const [product] = useProductDetail(productId)
+  
+const delivered= () => {
+let Remaining=parseFloat(+quantity)-1
+let newInventory={img,name,price, supplier,quantity:Remaining,description, }
+setProduct(newInventory)
+fetch(`http://localhost:5000/product/${productId}`,{
+  method: 'PUT',
+  body: JSON.stringify(newInventory),
+  headers:{
+    'Content-Type': 'application/json',
+  },
+})
+ 
+.then((response) =>response.json())
+.then(data=>{
+   
+  toast("Delivered succeeded!!!!")
+})
+}
+const restock= (e) => {
+  e.preventDefault();
+let updatedQuantity=parseFloat(+quantity)+1
+let newInventory={img,name,price, supplier, quantity:updatedQuantity,description}
+setProduct(newInventory)
+fetch(`http://localhost:5000/product/${productId}`,{
+  method: 'PUT',
+  body: JSON.stringify(newInventory),
+  headers:{
+    'Content-Type': 'application/json',
+  },
+})
+.then((response) =>response.json())
+.then(data=>{
+ console.log(data);
+ 
+  toast("Restock succeeded!!!!")
+})
+}
+ 
+ 
 
-    // const [product, setProduct] = useState({})
-
-    // useEffect(() => {
-    //     const url = `http://localhost:5000/product/${productId}`;
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => setProduct(data))
-
-    // }, [])
-
-
-    return (
-       <>
-             <Card className='mx-auto mt-5' style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={product.img} />
-        <Card.Body>
-          <Card.Title>{product.name}</Card.Title>
-          <Card.Text>
-          price: {product.price}
-          </Card.Text>
-          <Card.Text>
-         supplier: {product.supplier }
-          </Card.Text>
-          <Card.Text>
-        quantity:  {product.quantity }
-          </Card.Text>
-          <Button variant="primary">delivered</Button>
-        </Card.Body>
-        <Link to={`/manage`}>
-        <Button className='btn btn-primary'>Manage Inventories</Button>
-        </Link>
-      </Card>
-            
+  return (
+     <>
+           <Card className='mx-auto mt-5' style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={product.img} />
+      <Card.Body>
+        <Card.Title>{product.name}</Card.Title>
+        <Card.Text>
+      <p>  price: {product.price}</p>
+        </Card.Text>
+        <Card.Text>
+       supplier: {product.supplier }
+        </Card.Text>
+        <Card.Text>
+    <p>  quantity:  {product.quantity }</p>
+        </Card.Text>
+        <Button onClick={delivered}   className='btn btn-primary m-2'>delivered</Button>
+        <Button onClick={restock}  className='btn btn-primary m-4' >restock </Button>
+      </Card.Body>
+      <Link to={`/manage`}>
+      <Button className='btn btn-primary w-100'>Manage Inventories</Button>
+      </Link>
+    </Card>
           
-      
- </>
-      
-    );
-};
+        
+    
+</>
+  
+ 
+  );   
+ };
+ 
+ export default ProductDetail;
 
-export default ProductDetail;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  import React, { useEffect, useState } from 'react';
+// import { useParams } from 'react-router-dom';
+// import "./Details.css";
+// import { toast, ToastContainer } from 'react-toastify'
+// import 'react-toastify/dist/ReactToastify.css'
+
+// const Details = () => {
+//     const {id}=useParams();
+//     const [vegetable,setVegetable]=useState({})
+//     let {img,name,price,description,spName,quantity}=vegetable;
+//      useEffect(() => {
+//         const url=`http://localhost:5000/vegetable/${id}`
+//         console.log(url);
+//          fetch(url)
+//         .then(res=>res.json())
+//       .then((data)=>setVegetable(data));
+//      },[]) 
+
+// const delivered= () => {
+// let Remaining=parseFloat(+vegetable.quantity)-1
+// let newInventory={img,name,price,quantity:Remaining,description,spName}
+// setVegetable(newInventory)
+// fetch(http://localhost:5000/vegetable/${id},{
+//   method: 'PUT',
+//   body: JSON.stringify(newInventory),
+//   headers:{
+//     'Content-Type': 'application/json',
+//   },
+// })
+// .then((response) =>response.json())
+// .then(data=>{
+//   toast("Delivered succeeded!!!!!!!!!!!")
+// })
+// }
+
+
+// const restock= (e) => {
+//   e.preventDefault();
+// let updatedQuantity=parseFloat(+vegetable.quantity)+ parseFloat(e.target.upQuantity.value);
+// let newInventory={img,name,price,quantity:updatedQuantity,description,spName}
+// setVegetable(newInventory)
+// fetch(http://localhost:5000/vegetable/${id},{
+//   method: 'PUT',
+//   body: JSON.stringify(newInventory),
+//   headers:{
+//     'Content-Type': 'application/json',
+//   },
+// })
+// .then((response) =>response.json())
+// .then(data=>{
+//   e.target.reset()
+//   toast("Restock succeeded!!!!!!!!!!!")
+// })
+//      }
+
+//     return (
+//         <div>
+//            <h2 className="heading">Details</h2>
+           
+//           <div className="row_container">
+//           <div className="col-md-6 ms-5 mb-5">
+//             <img style={{width: '70%', height: '100%'}} src={vegetable?.img} alt="" />
+//            </div>
+//            {/* Delivered items */}
+//            <div  className="col-md-6 ms-2 mt-5">
+//            <h3 style={{lineHeight: '20px'}}>Product Name:{vegetable?.name}</h3>
+//            <h4 style={{lineHeight: '20px'}}>Supplier Name:{vegetable?.spName}</h4>
+//            <h4 style={{lineHeight: '20px'}}>Price:{vegetable?.price}</h4>
+//            <h4 style={{lineHeight: '20px'}}>Quantity:{vegetable?.quantity}</h4>
+//            <h4 style={{lineHeight: '20px'}}>Description:{vegetable?.description}....</h4>
+//           <button onClick={() =>delivered(quantity)}  className="delivered_click">Delivered</button>
+//            </div>
+           
+//           </div>
+//           {/* Restock items */}
+//           <div className="restock_items">
+//             <p> <h4 style={{fontSize:"35px"}} className="text-center ">Restock items</h4></p>
+//              <form onSubmit={restock} >
+//              <p className="quantity"><input name="upQuantity" type="number" placeholder="Add your quantity"/></p>
+//              <button className="add_click">Add now</button>
+//              </form>
+//           </div>
+//           <ToastContainer />
+//         </div>
+//     );
+// };
+
+// export default Details;
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

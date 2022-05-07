@@ -1,24 +1,45 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useProducts from '../../Hooks/UseProducts';
 import './ManageProduct.css';
 
 const ManageProducts = () => {
     const [products, setProducts] = useProducts()
+    // const [restock, setRestock] = useProducts()
 
-    const handleDelete = _id =>{
-        const proceed = window.confirm('Delete tha product')
-        if(proceed){
+    // const restockProduct = _id => {
+    //     const proceed = window.confirm('Product restock !!')
+    //     if (proceed) {
+    //         const url = `http://localhost:5000/product/${_id}`
+    //         fetch(url, {
+    //             method: "POST"
+    //         })
+    //         .then(res=> res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             const remaining = restock.filter(re => re._id !== _id)
+    //             setRestock(remaining)
+                
+    //         })
+
+
+    //     }
+    // }
+
+    const handleDelete = _id => {
+        const proceed = window.confirm('Delete tha product !!')
+        if (proceed) {
             const url = `http://localhost:5000/product/${_id}`
-            fetch(url,{
+            fetch(url, {
                 method: "DELETE"
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                const remaining = products.filter(product => product._id !== _id)
-                setProducts(remaining)
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = products.filter(product => product._id !== _id)
+                    setProducts(remaining)
+                })
 
         }
     }
@@ -36,7 +57,7 @@ const ManageProducts = () => {
                                     <Card.Body>
                                         <Card.Title>{product.name}</Card.Title>
                                         <p>
-                                            Price: {product.price}
+                                            Price: ${product.price}
                                         </p>
                                         <p>
                                             Supplier: {product.supplier}
@@ -44,8 +65,13 @@ const ManageProducts = () => {
                                         <p>
                                             Quantity: {product.quantity}
                                         </p>
-
-                                        <Button onClick={()=> handleDelete(product._id)} className="btn btn-danger"   >delete</Button>
+                                        <p>
+                                            Descriptions: {product.description}
+                                        </p>
+                                        <Link to={`/addproduct`}>
+                                        <Button   className='btn btn-primary m-2 '>Add new product </Button>
+                                        </Link>
+                                        <Button onClick={() => handleDelete(product._id)} className="btn btn-danger"   >Delete</Button>
                                     </Card.Body>
                                 </Card>
                             </div>

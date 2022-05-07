@@ -11,14 +11,14 @@ const Products = () => {
             .then(data => setProducts(data))
     }, [])
     return (
-        <div>
+        
             <div id='products' className='container'>
                 <div className="row ">
                     <h1 className='products-title mt-5'>  My Inventory  </h1>
                    
                     <div className="products-container">
                         {
-                            products.slice(5, 11).map(product =>  <Product
+                            products.slice(0, 6).map(product =>  <Product
                                 key={product._id}
                                 product={product}
                                 >
@@ -33,8 +33,7 @@ const Products = () => {
                  
                 </div>
             </div>
-
-        </div>
+ 
     );
 };
 

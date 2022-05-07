@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "627622927408c7cd748c3750",
+        "index": 0,
+        "img": "https://st3.depositphotos.com/1080148/32492/i/1600/depositphotos_324921124-stock-photo-boy-posing-isolated-white-background.jpg",
+        "age": 28,
+        "name": "Esmeralda Martinez",
+        "gender": "female",
+        "email": "esmeraldamartinez@cytrek.com",
+        "phone": "+1 (861) 461-3621"
+    },
+    {
+        "_id": "62762292115c20bf38d18959",
+        "index": 1,
+        "img": "https://st2.depositphotos.com/4391643/42417/i/1600/depositphotos_424179824-stock-photo-portrait-of-a-cute-beautiful.jpg",
+        "age": 21,
+        "name": "Pam Woods",
+        "gender": "female",
+        "email": "pamwoods@cytrek.com",
+        "phone": "+1 (968) 400-3927"
+    },
+    {
+        "_id": "627622923cfbdc79c29970ee",
+        "index": 2,
+        "img": "https://static6.depositphotos.com/1052857/582/i/950/depositphotos_5827823-stock-photo-cute-happy-3-year-old.jpg",
+        "age": 38,
+        "name": "Becker Velasquez",
+        "gender": "male",
+        "email": "beckervelasquez@cytrek.com",
+        "phone": "+1 (929) 450-2918"
+    }
+]

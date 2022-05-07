@@ -18,7 +18,7 @@ const Product = ({ product }) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <p>
-              Price: {price}
+              Price: ${price}
             </p>
             <p>
               Supplier: {supplier}
@@ -26,8 +26,11 @@ const Product = ({ product }) => {
             <p>
               Quantity: {quantity}
             </p>
+            <p>
+              Descriptions: {description}
+            </p>
 
-            <Button className="btn btn-primary" onClick={() =>navigateToProductDetail(_id)}  >Update</Button>
+            <Button className="btn btn-primary w-100 rounded-2 " onClick={() =>navigateToProductDetail(_id)}  >Update</Button>
           </Card.Body>
         </Card>
       </>
