@@ -19,7 +19,7 @@ const Members = () => {
                         members.map(member =>
                             <div key={member._id}>
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={member.img} />
+                                    <Card.Img height={'300px'} variant="top" src={member.img} />
                                     <Card.Body>
                                         <Card.Title> Name: {member.name}</Card.Title>
                                         <p>

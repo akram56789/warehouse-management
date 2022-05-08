@@ -2,17 +2,17 @@
     {
         "_id": "627622927408c7cd748c3750",
         "index": 0,
-        "img": "https://st3.depositphotos.com/1080148/32492/i/1600/depositphotos_324921124-stock-photo-boy-posing-isolated-white-background.jpg",
+        "img": "https://images.unsplash.com/photo-1554126807-6b10f6f6692a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         "age": 28,
         "name": "Esmeralda Martinez",
         "gender": "female",
-        "email": "esmeraldamartinez@cytrek.com",
+        "email": "martinez@cytrek.com",
         "phone": "+1 (861) 461-3621"
     },
     {
         "_id": "62762292115c20bf38d18959",
         "index": 1,
-        "img": "https://st2.depositphotos.com/4391643/42417/i/1600/depositphotos_424179824-stock-photo-portrait-of-a-cute-beautiful.jpg",
+        "img": "https://images.unsplash.com/photo-1507438222021-237ff73669b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80",
         "age": 21,
         "name": "Pam Woods",
         "gender": "female",
@@ -22,7 +22,7 @@
     {
         "_id": "627622923cfbdc79c29970ee",
         "index": 2,
-        "img": "https://static6.depositphotos.com/1052857/582/i/950/depositphotos_5827823-stock-photo-cute-happy-3-year-old.jpg",
+        "img": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         "age": 38,
         "name": "Becker Velasquez",
         "gender": "male",

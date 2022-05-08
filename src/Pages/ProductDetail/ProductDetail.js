@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
   
   let  {img, name, price,  description, supplier, quantity } = product;
   useEffect(() =>{
-    const url = `http://localhost:5000/product/${productId}`
+    const url = `https://sleepy-earth-76800.herokuapp.com/product/${productId}`
     console.log(url);
     fetch(url)
     .then(res => res.json())
@@ -21,7 +21,7 @@ const delivered= () => {
 let Remaining=parseFloat(+quantity)-1
 let newInventory={img,name,price, supplier,quantity:Remaining,description, }
 setProduct(newInventory)
-fetch(`http://localhost:5000/product/${productId}`,{
+fetch(`https://sleepy-earth-76800.herokuapp.com/product/${productId}`,{
   method: 'PUT',
   body: JSON.stringify(newInventory),
   headers:{
@@ -40,7 +40,7 @@ const restock= (e) => {
 let updatedQuantity=parseFloat(+quantity)+1
 let newInventory={img,name,price, supplier, quantity:updatedQuantity,description}
 setProduct(newInventory)
-fetch(`http://localhost:5000/product/${productId}`,{
+fetch(`https://sleepy-earth-76800.herokuapp.com/product/${productId}`,{
   method: 'PUT',
   body: JSON.stringify(newInventory),
   headers:{
@@ -114,7 +114,7 @@ fetch(`http://localhost:5000/product/${productId}`,{
 //     const [vegetable,setVegetable]=useState({})
 //     let {img,name,price,description,spName,quantity}=vegetable;
 //      useEffect(() => {
-//         const url=`http://localhost:5000/vegetable/${id}`
+//         const url=`https://sleepy-earth-76800.herokuapp.com/vegetable/${id}`
 //         console.log(url);
 //          fetch(url)
 //         .then(res=>res.json())
@@ -125,7 +125,7 @@ fetch(`http://localhost:5000/product/${productId}`,{
 // let Remaining=parseFloat(+vegetable.quantity)-1
 // let newInventory={img,name,price,quantity:Remaining,description,spName}
 // setVegetable(newInventory)
-// fetch(http://localhost:5000/vegetable/${id},{
+// fetch(https://sleepy-earth-76800.herokuapp.com/vegetable/${id},{
 //   method: 'PUT',
 //   body: JSON.stringify(newInventory),
 //   headers:{
@@ -144,7 +144,7 @@ fetch(`http://localhost:5000/product/${productId}`,{
 // let updatedQuantity=parseFloat(+vegetable.quantity)+ parseFloat(e.target.upQuantity.value);
 // let newInventory={img,name,price,quantity:updatedQuantity,description,spName}
 // setVegetable(newInventory)
-// fetch(http://localhost:5000/vegetable/${id},{
+// fetch(https://sleepy-earth-76800.herokuapp.com/vegetable/${id},{
 //   method: 'PUT',
 //   body: JSON.stringify(newInventory),
 //   headers:{

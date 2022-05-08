@@ -19,7 +19,7 @@ const Review = () => {
                      reviews.map(review =>  
                         <div key={review.id}>
                               <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={review.picture} />
+                                    <Card.Img height={'200px'} variant="top" src={review.picture} />
                                     <Card.Body>
                                         <Card.Title> Name: {review.name}</Card.Title>
                                         <p>
@@ -28,12 +28,7 @@ const Review = () => {
                                         <p>
                                         Retting: {review.retting}
                                         </p>
-                                        {/* <p>
-                                            Age: {review.age}
-                                        </p>
-                                        <p>
-                                            Descriptions: {review.description}
-                                        </p> */}
+                                     
                                      
 
                                     </Card.Body>

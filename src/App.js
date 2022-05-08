@@ -46,6 +46,7 @@ function App() {
              <AddProduct></AddProduct>
            </RequireAuth>
          }></Route>
+          
          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
        
          <Route path='*' element={<NotFound></NotFound>}></Route>

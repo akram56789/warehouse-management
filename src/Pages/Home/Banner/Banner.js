@@ -1,47 +1,45 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import './Banner.css';
 
 const Banner = () => {
     return (
-        <div>
+        <>
             <Carousel>
   <Carousel.Item>
-    <img
+    <img height={'500'}
       className="d-block w-100"
-      src="https://wallpaperaccess.com/full/1986181.jpg"
+      src="https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+     
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
+    <img height={'500'}
       className="d-block w-100"
-      src="https://www.animaderm.com/upload/stblog/1/3/71/371large.jpg"
+      src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
       alt="Second slide"
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+   
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
+    <img height={'500'}
       className="d-block w-100"
-      src="https://wallpaperaccess.com/full/1912939.jpg"
+      src="https://images.unsplash.com/photo-1580201092675-a0a6a6cafbb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
       alt="Third slide"
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+  
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
-        </div>
+        </>
     );
 };
 

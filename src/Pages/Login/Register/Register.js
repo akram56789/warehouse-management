@@ -64,7 +64,7 @@ const Register = () => {
                     Register
                 </button>
 
-                {/* <input disabled={!agree} className='form-submit w-50 mx-auto btn btn-primary' type="submit" value="Register" /> */}
+                 
             </form>
             <p>আপনার কি আগেই আছে?<Link to="/login" className='text-primary pe-auto text-decoration-none'  > ক্লিক করুন</Link></p>
 
@@ -82,58 +82,3 @@ export default Register;
 
 
 
-// const Register = () => {
-//     const [email, setEmail] = useState('');
-//     const [password, setPassword] = useState('');
-//     const [name, setName] = useState('');
-//     const [
-//         createUserWithEmailAndPassword,
-//         user,error,
-//     ] = useCreateUserWithEmailAndPassword(auth);
-
-//     const navigate =useNavigate()
-
-//     if (error) {
-//         return (<p>Error: {error.message}</p>);
-//     }
-//     if (user) {
-//        navigate('/login')
-//     }
-//     return (
-//         <div className='className='register-form w-50>
-//             <h1 className='text-center'>Please Register</h1>
-//             <form >
-                // <input
-                //     type="text"
-                //     value={name}
-                //     onChange={(e) => setName(e.target.value)}
-                //     placeholder='Enter your name'
-                // />
-//                 <input
-//                     type="email"
-//                     value={email}
-//                     onChange={(e) => setEmail(e.target.value)}
-//                     placeholder='Enter your email'
-//                     required
-//                 />
-//                 <input
-//                     type="password"
-//                     value={password}
-//                     onChange={(e) => setPassword(e.target.value)}
-//                     placeholder='Enter your password'
-//                     required
-//                 />
-//                 <button className='button' onClick={() => createUserWithEmailAndPassword(email, password)}>
-//                     Register
-//                 </button>
-//                 <p className='text-center'> Already have an Account? <Link className='text-decoration-none' to='/login'>Please Login</Link></p>
-//             </form>
-//             <SocialLogin></SocialLogin>
-//         </div>
-//     );
-// };
-
-// export default Register;
-
-
- 

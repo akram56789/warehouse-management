@@ -11,7 +11,7 @@ const ManageProducts = () => {
     const handleDelete = _id => {
         const proceed = window.confirm('Delete tha product !!')
         if (proceed) {
-            const url = `http://localhost:5000/product/${_id}`
+            const url = `https://sleepy-earth-76800.herokuapp.com/product/${_id}`
             fetch(url, {
                 method: "DELETE"
             })
@@ -34,7 +34,7 @@ const ManageProducts = () => {
                         products.map(product =>
                             <div key={product._id}>
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={product.img} />
+                                    <Card.Img height={'200px'} variant="top" src={product.img} />
                                     <Card.Body>
                                         <Card.Title>{product.name}</Card.Title>
                                         <p>

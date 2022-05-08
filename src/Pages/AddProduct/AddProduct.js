@@ -7,7 +7,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/product`
+        const url = `https://sleepy-earth-76800.herokuapp.com/product`
         fetch(url,{
             method: 'POST',
             headers: {
@@ -18,6 +18,7 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(result =>{
             console.log(result);
+          
             toast('product added')
         })
     
