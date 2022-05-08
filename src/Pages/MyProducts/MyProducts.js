@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import useProducts from '../../Hooks/UseProducts';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import './Myproducts.css';
 
 const MyProducts = () => {
-    const [products, setProducts] = useProducts()
+    // const [products, setProducts] = useProducts()
+    const [product, setProduct] = useState([])
+
+    const [user] = useAuthState(auth)
+
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/myproduct?email=${user.email}`)
+        .then(res => res.json())
+        .then(data => setProduct(data))
+
+    },[user])
     
 
     const handleDelete = _id => {
@@ -17,8 +29,8 @@ const MyProducts = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    const remaining = products.filter(product => product._id !== _id)
-                    setProducts(remaining)
+                    const remaining = product.filter(product => product._id !== _id)
+                    setProduct(remaining)
                 })
 
         }
@@ -30,7 +42,7 @@ const MyProducts = () => {
                 <h1 className='products-title mt-5'>  My Items </h1>
                 <div className="products-container">
                     {
-                        products.map(product =>
+                        product.map(product =>
                             <div key={product._id}>
                                 <Card style={{ width: '18rem' }}>
                                     <Card.Img height={'200px'} variant="top" src={product.img} />
