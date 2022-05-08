@@ -12,7 +12,7 @@ const MyProducts = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myproduct?email=${user.email}`)
+        fetch(`https://sleepy-earth-76800.herokuapp.com/myproduct?email=${user.email}`)
         .then(res => res.json())
         .then(data => setProduct(data))
 
