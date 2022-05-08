@@ -32,7 +32,7 @@ const Product = ({ product }) => {
     </div>    
     
   </div>
- 
+  
  
       
       </>
