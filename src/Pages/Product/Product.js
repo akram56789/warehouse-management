@@ -26,32 +26,15 @@ const Product = ({ product }) => {
         <p>Supplier: {supplier}</p>
         <p>Quantity: {quantity}</p>
         <p>Description: {description}</p>
-        <Button className="btn btn-primary w-100 rounded-2 " onClick={() =>navigateToProductDetail(_id)}  >Update</Button>
+        <Button className="btn btn-dark w-100 rounded-2 " onClick={() =>navigateToProductDetail(_id)}  >Update</Button>
 
       </div>
     </div>    
+    
   </div>
  
-        {/* <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={img} />
-          <Card.Body>
-            <Card.Title>{name}</Card.Title>
-            <p>
-              Price: ${price}
-            </p>
-            <p>
-              Supplier: {supplier}
-            </p>
-            <p>
-              Quantity: {quantity}
-            </p>
-            <p>
-              Descriptions: {description}
-            </p>
-
-            <Button className="btn btn-primary w-100 rounded-2 " onClick={() =>navigateToProductDetail(_id)}  >Update</Button>
-          </Card.Body>
-        </Card> */}
+ 
+      
       </>
 
     );

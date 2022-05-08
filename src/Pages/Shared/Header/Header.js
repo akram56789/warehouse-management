@@ -23,7 +23,7 @@ const Header = () => {
     <Navbar sticky='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <h3>📦INVENTORY🛒</h3>
+          <h3>📦Fahim_I_House🛒</h3>
           {/* <img height={30} src={logo} alt="" /> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -32,6 +32,7 @@ const Header = () => {
             <Nav.Link   href="home#products ">Inventory </Nav.Link>
        
             <Nav.Link href="home#members">Members</Nav.Link>
+          
              
           </Nav>
           <Nav>
@@ -40,6 +41,7 @@ const Header = () => {
               user && <>
                 <Nav.Link as={Link} to="/addproduct">Add</Nav.Link>
                 <Nav.Link as={Link} to="/manage">Manage</Nav.Link>
+                <Nav.Link as={Link} to="/myproduct">MyItems</Nav.Link>
             
 
               </>
