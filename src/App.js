@@ -46,7 +46,7 @@ function App() {
              <AddProduct></AddProduct>
            </RequireAuth>
          }></Route>
-         <Route path='/myproducts' element={
+         <Route path='/myproduct' element={
            <RequireAuth>
             <MyProducts></MyProducts>
            </RequireAuth>
