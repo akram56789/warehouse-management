@@ -11,13 +11,13 @@ const MyProducts = () => {
     const [user] = useAuthState(auth)
 
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch(`https://sleepy-earth-76800.herokuapp.com/myproduct?email=${user.email}`)
-        .then(res => res.json())
-        .then(data => setProduct(data))
+            .then(res => res.json())
+            .then(data => setProduct(data))
 
-    },[user])
-    
+    }, [user])
+
 
     const handleDelete = _id => {
         const proceed = window.confirm('Delete tha product !!')

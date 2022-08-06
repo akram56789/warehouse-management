@@ -4,6 +4,7 @@ import './Banner.css';
 
 const Banner = () => {
     return (
+      
         <>
             <Carousel>
   <Carousel.Item>
@@ -29,6 +30,7 @@ const Banner = () => {
   </Carousel.Item>
   <Carousel.Item>
     <img height={'500'}
+    
       className="d-block w-100"
       src="https://images.unsplash.com/photo-1580201092675-a0a6a6cafbb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
       alt="Third slide"
